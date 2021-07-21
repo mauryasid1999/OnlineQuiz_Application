@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = ')d97)&5wb2%@@$khb+y+7@)n+nfkouj!=@a#+qfb-eags4f3*r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [' onlinesidquiz.herokuapp.com/','localhost' ]
 
@@ -129,3 +130,5 @@ STATICFILES_DIRS=(
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 STATIC_ROOT=os.path.join(BASE_DIR,"staticfiles")
+
+django_heroku.settings(locals())
