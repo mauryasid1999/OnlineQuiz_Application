@@ -1,0 +1,17 @@
+{% extends 'extra.html' %}
+{% load static %}
+{% block content %}
+<h1 align="center">WELCOME TO QUIZ ARENA</h1>
+<h2 align="center">Register For Quiz</h2>
+<div class="container jumbotron">
+
+    <form method="POST" action="" >
+        {% csrf_token %}
+        
+        {{form.as_p}}
+       
+        <input class="btn btn-success" type="submit" value="Register Account">
+         <p>Already have an account?<a href='{% url 'login' %}'>Login</a></p>
+    </form>
+</div>
+{% endblock %}
