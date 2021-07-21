@@ -26,7 +26,7 @@ SECRET_KEY = ')d97)&5wb2%@@$khb+y+7@)n+nfkouj!=@a#+qfb-eags4f3*r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['onlinesidsquiz.herokuapp.com']
 
 
 # Application definition
