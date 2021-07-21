@@ -26,7 +26,7 @@ SECRET_KEY = ')d97)&5wb2%@@$khb+y+7@)n+nfkouj!=@a#+qfb-eags4f3*r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [' onlinesidquiz.herokuapp.com/','localhost' ]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -126,12 +126,12 @@ STATIC_URL = '/static/'
 #MEDIA_URL='/media/'
 STATIC_ROOT=os.path.join(BASE_DIR,"staticfiles")
 
-#STATICFILES_DIRS=[
- #   os.path.join(BASE_DIR,"static")
-#]
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,"static")
+]
 
 
 #MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-
-#django_heroku.settings(locals())
+django_heroku.settings(locals())

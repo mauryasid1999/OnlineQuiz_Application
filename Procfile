@@ -1,1 +1,2 @@
-web: gunicorn Quiz.wsgi 
+web: gunicorn Quiz.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
