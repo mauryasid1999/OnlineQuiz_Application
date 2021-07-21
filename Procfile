@@ -1,2 +1,2 @@
-web: gunicorn Quiz_wsgi.py
+web: gunicorn Quiz.wsgi
 python manage.py collectstatic --noinput
